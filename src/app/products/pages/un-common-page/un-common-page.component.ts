@@ -7,4 +7,29 @@ import { Component } from '@angular/core';
 })
 export class UnCommonPageComponent {
 
+  // i18n Select
+  public name: string = 'John';
+  public gender: 'male'|'female' = 'male';
+  public invitationMap = {
+    'male': 'invitarlo',
+    'female': 'invitarla'
+  };
+  public clientsMap = {
+    '=0': 'no tenemos ningún cliente esperando.',
+    '=1': 'tenemos un cliente esperando.',
+    'other': 'tenemos # clientes esperando.'
+  }
+
+  changeClient():void {
+    this.name = 'Mary';
+    this.gender = 'female';
+  }
+
+  // i18n Plural
+  public clients: string[] = ['John', 'Mary', 'Wendy', 'Peter', 'Paul', 'Mark', 'Luke', 'John', 'Mary', 'Wendy', 'Peter', 'Paul', 'Mark', 'Luke'];
+
+  deleteClient():void {
+    this.clients.pop();
+  }
+
 }
