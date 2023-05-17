@@ -26,10 +26,17 @@ export class UnCommonPageComponent {
   }
 
   // i18n Plural
-  public clients: string[] = ['John', 'Mary', 'Wendy', 'Peter', 'Paul', 'Mark', 'Luke', 'John', 'Mary', 'Wendy', 'Peter', 'Paul', 'Mark', 'Luke'];
+  public clients: string[] = ['John', 'Mary', 'Wendy', 'Peter', 'Paul', 'Mark', 'Luke', 'John', 'Mary'];
 
   deleteClient():void {
     this.clients.pop();
+  }
+
+  // KeyValue Pipe
+  public person = {
+    name: 'John',
+    age: 35,
+    address: 'New York, USA'
   }
 
 }
