@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Observable, interval, tap } from 'rxjs';
 
 @Component({
   selector: 'app-un-common-page',
@@ -39,4 +40,16 @@ export class UnCommonPageComponent {
     address: 'New York, USA'
   }
 
+  // Async Pipe
+  public myObservableTimer: Observable<number> = interval(2000).pipe(
+    tap(value => console.log('Async Pipe: ', value) )
+  );
+
+  // public promiseValue: Promise<string> = new Promise((resolve, reject) => {
+  //   setTimeout(() => {
+  //     resolve('Promise resolved');
+  //     console.log('Promise resolved');
+  //   }, 3500);
+  // }
+  // );
 }
